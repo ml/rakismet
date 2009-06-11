@@ -1,0 +1,7 @@
+= rakismet
+
+Description goes here.
+
+== Copyright
+
+Copyright (c) 2009 Maciej Lotkowski. See LICENSE for details.
