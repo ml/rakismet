@@ -5,9 +5,11 @@ require 'fakeweb'
 
 FakeWeb.allow_net_connect = false
 
-describe Rack do
-  describe Rakismet do
+describe "Rack" do
+  describe "Rakismet" do
     describe "#comment_check" do
+      before(:each) { register_akismet_uri "verify-key", "valid" }
+      
       it "should not check comment when predicate does not match" do
          rakismet = create_rakismet(lambda { false })
          rakismet.should_not_receive :comment_check
